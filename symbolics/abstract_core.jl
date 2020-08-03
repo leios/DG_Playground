@@ -17,6 +17,10 @@ push!(binary_operators, ["Add", "+"])
 push!(binary_operators, ["Multiply", "*"])
 push!(binary_operators, ["Exponentiation", "^"])
 
+nary_operators = []
+push!(nary_operators, ["Sum", "+"])
+push!(nary_operators, ["Multiplicative_Sum", "*"])
+
 # Define Abstract Types
 abstract type AbstractEquation end
 abstract type AbstractSystem end
@@ -24,6 +28,7 @@ abstract type AbstractExpression end
 abstract type AbstractOperation <: AbstractExpression end
 abstract type UnaryOperation  <: AbstractOperation end
 abstract type BinaryOperation <: AbstractOperation end
+abstract type NaryOperation <: AbstractOperation end
 abstract type AbstractData <: AbstractExpression end
 abstract type AbstractMetaData <: AbstractExpression end
 
